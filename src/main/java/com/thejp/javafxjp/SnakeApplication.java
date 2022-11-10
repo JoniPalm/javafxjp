@@ -11,7 +11,7 @@ public class SnakeApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SnakeApplication.class.getResource("game-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 400, 400);
         stage.setTitle("Snake!");
         stage.setScene(scene);
         stage.show();
