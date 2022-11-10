@@ -28,7 +28,10 @@ public class GameViewController {
             if (time < 0.2)
                 return;
 
+            snake.update();
             render();
+
+            time = 0.0f;
         }
     };
 
