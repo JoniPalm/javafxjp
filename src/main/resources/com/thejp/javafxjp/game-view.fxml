@@ -8,6 +8,6 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.thejp.javafxjp.controller.GameViewController">
 
-      <Canvas fx:id="canvas" height="400.0" layoutX="200.0" layoutY="100.0" width="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Canvas fx:id="canvas" onKeyPressed="#keyPressed" height="400.0" layoutX="200.0" layoutY="100.0" width="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 
 </AnchorPane>

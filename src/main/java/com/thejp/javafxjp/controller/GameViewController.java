@@ -4,7 +4,7 @@ import com.thejp.javafxjp.GameAnimation;
 import com.thejp.javafxjp.model.SnakeModel;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 
 public class GameViewController {
@@ -16,6 +16,7 @@ public class GameViewController {
 
     public void initialize() {
         gContext = canvas.getGraphicsContext2D();
+        canvas.setFocusTraversable(true);
         gameAnimation.start();
     }
 
@@ -42,5 +43,14 @@ public class GameViewController {
         gContext.fillRect(0, 0, 400, 400);
         gContext.setFill(Color.web("#004b87"));
         gContext.fillRect(snake.getPosition().x() * 10, snake.getPosition().y() * 10, 10, 10);
+    }
+
+    public void keyPressed(KeyEvent keyEvent) {
+        switch (keyEvent.getCode()) {
+            case UP -> snake.setUp();
+            case DOWN -> snake.setDown();
+            case LEFT -> snake.setLeft();
+            case RIGHT -> snake.setRight();
+        }
     }
 }
