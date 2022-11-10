@@ -5,4 +5,8 @@ module com.thejp.javafxjp {
 
     opens com.thejp.javafxjp to javafx.fxml;
     exports com.thejp.javafxjp;
+    exports com.thejp.javafxjp.model;
+    opens com.thejp.javafxjp.model to javafx.fxml;
+    exports com.thejp.javafxjp.controller;
+    opens com.thejp.javafxjp.controller to javafx.fxml;
 }

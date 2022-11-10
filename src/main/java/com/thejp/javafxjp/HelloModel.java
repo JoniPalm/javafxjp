@@ -1,0 +1,24 @@
+package com.thejp.javafxjp;
+
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
+public class HelloModel {
+    private StringProperty text;
+
+    public HelloModel() {
+        text = new SimpleStringProperty();
+    }
+
+    public String getText() {
+        return text.get();
+    }
+
+    public void setText(String text) {
+        this.text.set(text);
+    }
+
+    public StringProperty textProperty() {
+        return text;
+    }
+}
